@@ -26,7 +26,7 @@ jobs:
             cmd: "cargo fmt --check"
           - runner: "ubuntu-latest"
             name: "clippy"
-            cmd: "cargo clippy --all --all-features --tests --benches --examples -- -D warnings"
+            cmd: "cargo clippy --all --all-features --tests --benches --examples -- -D warnings --force-non-host"
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
